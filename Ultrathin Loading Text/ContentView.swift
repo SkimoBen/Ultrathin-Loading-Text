@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var failure = ""
+    @State var failure = "sorry"
     var body: some View {
        ProgressView(failure: $failure)
     }
@@ -40,7 +40,7 @@ struct ProgressView: View {
 
 struct TextProgressView: View {
     var loadingText: String = "A team of pixies is working hard to make something beautiful for you"
-    var failureText: String = "Sorry, even pixies need a break sometimes. They might be able to handle smaller image dimensions."
+    var failureText: String = "Sorry, even pixies need a break sometimes. Maybe they'll do better in a few minutes."
     var loadingColours: [Color] = [.cyan, .blue, .red]
     var failureColours: [Color] = [.red, .primary]
     @State var animatedHue = false
